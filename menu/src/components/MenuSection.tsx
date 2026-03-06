@@ -2,64 +2,65 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { MenuItem } from "../data/menuData";
 
-
 interface MenuSectionProps {
+  id?: string;   // ✅ accepts scroll-target id from parent
   title: string;
   items: MenuItem[];
 }
 
-
-const MenuSection = ({ title, items }: MenuSectionProps) => {
+const MenuSection = ({ id, title, items }: MenuSectionProps) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-50px" });
+  const isInView = useInView(ref, { once: true, margin: "0px" });
 
   return (
+    // ✅ id passed here — Hero buttons will scroll to this element
     <motion.div
+      id={id}
       ref={ref}
-      className="py-16"
+      className="py-16 scroll-mt-20"   // scroll-mt-20 offsets the sticky nav so heading isn't hidden
       initial={{ opacity: 0, y: 30 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.6 }}
     >
-      <h3 className="font-serif text-2xl md:text-3xl text-foreground text-center mb-8">
-        {title}
-      </h3>
-      
-      <div className="max-w-xl mx-auto">
+      {/* Section heading */}
+      <div className="text-center mb-10">
+        <h3 className="font-serif text-2xl md:text-3xl text-foreground mb-3">
+          {title}
+        </h3>
+        <div className="decorative-line" />
+      </div>
+
+      {/* Menu items list */}
+      <div className="max-w-xl mx-auto space-y-0">
         {items.map((item, index) => (
-  <motion.div
-    key={index}
-    initial={{ opacity: 0, y: 20 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.4, delay: index * 0.05 }}
-    viewport={{ once: true }}
-    className="group flex items-center gap-4 border-b border-neutral-200 pb-6"
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.35, delay: index * 0.05 }}
+            viewport={{ once: true }}
+            className="group flex items-center gap-4 border-b border-foreground/10 py-5 hover:bg-foreground/[0.02] rounded-xl px-2 transition-colors duration-200"
+          >
+            {/* Image */}
+            <div className="w-20 h-20 flex-shrink-0 rounded-2xl overflow-hidden bg-muted shadow-sm group-hover:shadow-md transition-shadow duration-200">
+              <img
+                src={item.image}
+                alt={item.name}
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
 
-  >
-    {/* IMAGE LEFT */}
-    <div className="w-24 h-24 rounded-3xl overflow-hidden bg-neutral-100 flex items-center justify-center shadow-md">
-
-  <img
-    src={item.image}
-    alt={item.name}
-    className="w-full h-full object-cover"
-  />
-</div>
-
-
-    {/* NAME + PRICE */}
-    <div className="flex justify-between items-center w-full">
-      <h3 className="text-base font-medium tracking-wide">
-        {item.name}
-      </h3>
-
-      <span className="text-base font-semibold">
-        {item.price}
-      </span>
-    </div>
-  </motion.div>
-))}
-
+            {/* Name + Price */}
+            <div className="flex justify-between items-center w-full pr-1">
+              <h4 className="font-sans text-base font-medium text-foreground tracking-wide">
+                {item.name}
+              </h4>
+              <span className="font-serif text-base font-semibold text-foreground ml-4 whitespace-nowrap">
+                {item.price}
+              </span>
+            </div>
+          </motion.div>
+        ))}
       </div>
     </motion.div>
   );

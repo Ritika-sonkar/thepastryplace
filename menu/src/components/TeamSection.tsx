@@ -5,19 +5,20 @@ import team2 from "@/assets/team2.jpeg";
 
 // Easily editable team data
 export const teamData = [
-  {
+  { 
     id: 1,
-    name: "Karan Thaval",
+    name:"Kritika Thawal",
     role: "Founder",
-    description: "Driven by a love for artisanal desserts and refined flavors, he founded The Pastry Place with a vision to create more than just sweets — but experiences. Every recipe reflects his dedication to quality ingredients, delicate craftsmanship, and timeless taste..",
-    image: team1,
+    description: "With a sharp eye for detail and a passion for perfection, she manages the daily operations of The Pastry Place. Her dedication ensures that every cheesecake, brownie, and tiramisu served reflects the brand’s promise of quality and elegance..",
+    image: team2,
+    
   },
   {
     id: 2,
-    name:"Kritika Thawal",
+    name: "Karan Thawal",
     role: "Executive Baker",
-    description: "With a sharp eye for detail and a passion for perfection, she manages the daily operations of The Pastry Place. Her dedication ensures that every cheesecake, brownie, and tiramisu served reflects the brand’s promise of quality and elegance..",
-    image: team2,
+    description: "Driven by a love for artisanal desserts and refined flavors, he founded The Pastry Place with a vision to create more than just sweets — but experiences. Every recipe reflects his dedication to quality ingredients, delicate craftsmanship, and timeless taste..",
+    image: team1,
   },
   
 ];

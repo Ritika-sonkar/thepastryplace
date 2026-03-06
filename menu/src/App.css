@@ -40,3 +40,10 @@
 .read-the-docs {
   color: #888;
 }
+.clip-path-ribbon-left {
+  clip-path: polygon(100% 0, 0 50%, 100% 100%);
+}
+
+.clip-path-ribbon-right {
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+}

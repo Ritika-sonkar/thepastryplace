@@ -11,20 +11,45 @@ const RegistrationForm = () => {
     contactNumber: "",
     dateOfBirth: "",
   });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Frontend only - will be connected to Google Sheets later
-    toast({
-      title: "Welcome to our sweet community! 🎂",
-      description: "We'll send you special offers on your birthday!",
-    });
-    setFormData({ fullName: "", contactNumber: "", dateOfBirth: "" });
-  };
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+  setFormData({
+    ...formData,
+    [e.target.name]: e.target.value
+  });
+};
+  const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+
+  const data = {
+    fullName: formData.fullName,
+    contactNumber: formData.contactNumber,
+    dateOfBirth: formData.dateOfBirth
   };
+
+  // show toast immediately
+  toast({
+    title: "Welcome to our sweet community! 🎂",
+    description: "We'll send you special offers on your birthday!",
+  });
+
+  // clear form instantly
+  setFormData({
+    fullName: "",
+    contactNumber: "",
+    dateOfBirth: ""
+  });
+
+  // send data in background (don't await)
+  fetch(
+    "https://script.google.com/macros/s/AKfycbzYcS3XBOkjlFI51h7LAwgmE2t1mbQ5lKdIZeAyS7Z93xppahxNcG2tJRMRDh64pzdD-g/exec",
+    {
+      method: "POST",
+      mode: "no-cors",
+      body: JSON.stringify(data)
+    }
+  ).catch(err => console.error(err));
+};
+    
 
   return (
     <section className="section-padding bg-secondary/30" ref={ref}>

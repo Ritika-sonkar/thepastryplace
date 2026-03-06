@@ -9,7 +9,7 @@ const LocationSection = () => {
 
   const contactInfo = [
     { icon: MapPin, label: "Address", value: "kakde Complex near S.Kumar Wade Wale,Opposite Krushna Pure Veg Hotel, Manjari BK Pune -412307" },
-    { icon: Phone, label: "Phone", value: "+91 8446772207" },
+    { icon: Phone, label: "Phone", value: "+91 7020654498" },
     { icon: Clock, label: "Hours", value: "Mon-Sun: 6:00 PM - 10:00 PM" },
     { icon: Mail, label: "Email", value: "thepastryplace45@gmail.com" },
     { icon: Instagram, label: "Instagram", value: "@the_pastry.place" },

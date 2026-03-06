@@ -1,11 +1,55 @@
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
-import AnimatedCounter from "./AnimatedCounter";
+import { motion, useInView, useMotionValue, useTransform, animate } from "framer-motion";
+import { useRef, useEffect, useState } from "react";
 import cheesecakeHero from "@/assets/signature.jpeg";
 
+/* ── Inline AnimatedCounter (mobile-safe) ── */
+const AnimatedCounter = ({
+  end,
+  suffix = "",
+  duration = 1.8,
+  isInView,
+}: {
+  end: number;
+  suffix?: string;
+  duration?: number;
+  isInView: boolean;
+}) => {
+  const [display, setDisplay] = useState(0);
+  const hasRun = useRef(false);
+
+  useEffect(() => {
+    if (!isInView || hasRun.current) return;
+    hasRun.current = true;
+
+    let startTime: number | null = null;
+    const step = (timestamp: number) => {
+      if (!startTime) startTime = timestamp;
+      const progress = Math.min((timestamp - startTime) / (duration * 1000), 1);
+      // ease out cubic
+      const eased = 1 - Math.pow(1 - progress, 3);
+      setDisplay(Math.floor(eased * end));
+      if (progress < 1) requestAnimationFrame(step);
+      else setDisplay(end);
+    };
+
+    requestAnimationFrame(step);
+  }, [isInView, end, duration]);
+
+  return (
+    <span>
+      {display}
+      {suffix}
+    </span>
+  );
+};
+
+/* ── Main Component ── */
 const SignatureCheesecake = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
+
+  // margin: "0px" ensures it fires as soon as ANY part enters the viewport
+  // — fixes the mobile issue where negative margin kills the trigger
+  const isInView = useInView(ref, { once: true, margin: "0px" });
 
   const stats = [
     { value: 100, suffix: "+", label: "Orders Daily" },
@@ -14,10 +58,15 @@ const SignatureCheesecake = () => {
   ];
 
   return (
-    <section id="signature-cheesecake" className="section-padding bg-secondary/30" ref={ref}>
+    <section
+      id="signature-cheesecake"
+      className="section-padding bg-secondary/30"
+      ref={ref}
+    >
       <div className="container-custom">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          {/* Image */}
+
+          {/* ── Image ── */}
           <motion.div
             className="relative"
             initial={{ opacity: 0, x: -50 }}
@@ -35,7 +84,7 @@ const SignatureCheesecake = () => {
             </div>
           </motion.div>
 
-          {/* Content */}
+          {/* ── Content ── */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
@@ -44,16 +93,16 @@ const SignatureCheesecake = () => {
             <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-foreground mb-6">
               Our Signature Baked Cheesecake
             </h2>
-            
-            <div className="decorative-line mb-6 mx-0" style={{ marginLeft: 0 }} />
-            
+
+            <div className="decorative-line mb-6" style={{ marginLeft: 0 }} />
+
             <p className="font-sans text-muted-foreground text-lg leading-relaxed mb-8">
               A rich and velvety Indian-inspired cheesecake, delicately crafted with premium cream
-               cheese and infused with subtle native flavors. Smooth, indulgent, and perfectly balanced
-                — every slice melts in your mouth with a luxurious finish.
+              cheese and infused with subtle native flavors. Smooth, indulgent, and perfectly balanced
+              — every slice melts in your mouth with a luxurious finish.
             </p>
 
-            {/* Animated Stats */}
+            {/* ── Animated Stats ── */}
             <div className="grid grid-cols-3 gap-4">
               {stats.map((stat, index) => (
                 <motion.div
@@ -61,10 +110,15 @@ const SignatureCheesecake = () => {
                   className="text-center p-4 bg-card rounded-2xl shadow-soft"
                   initial={{ opacity: 0, y: 20 }}
                   animate={isInView ? { opacity: 1, y: 0 } : {}}
-                  transition={{ duration: 0.2, delay: 0.4 + index * 0.1 }}
+                  transition={{ duration: 0.4, delay: 0.4 + index * 0.12 }}
                 >
                   <div className="font-serif text-2xl md:text-3xl text-gold font-semibold">
-                    <AnimatedCounter end={stat.value} suffix={stat.suffix} />
+                    <AnimatedCounter
+                      end={stat.value}
+                      suffix={stat.suffix}
+                      isInView={isInView}
+                      duration={1.6 + index * 0.1}
+                    />
                   </div>
                   <div className="font-sans text-xs md:text-sm text-muted-foreground mt-1">
                     {stat.label}
@@ -73,6 +127,7 @@ const SignatureCheesecake = () => {
               ))}
             </div>
           </motion.div>
+
         </div>
       </div>
     </section>

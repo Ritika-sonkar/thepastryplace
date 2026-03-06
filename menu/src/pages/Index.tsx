@@ -2,14 +2,15 @@ import Hero from "@/components/Hero";
 import SignatureCheesecake from "@/components/SignatureCheesecake";
 import ProductHighlight from "@/components/ProductHighlight";
 import RegistrationForm from "@/components/RegistrationForm";
-import EventsSection from "@/components/EventsSection";
+import EventsSection from "@/components/OrderSection";
 import TeamSection from "@/components/TeamSection";
 import LocationSection from "@/components/LocationSection";
 import Footer from "@/components/Footer";
+import OrderPreview from "@/components/OrderPreview";
 
 // Import images
 import nobakeCheesecake from "@/assets/cheesecake2.jpeg";
-import cheesecakeHero from "@/assets/cheesecake3.jpeg";
+import cheesecakeHero from "@/assets/Cheesecake3.jpg";
 import tiramisuImg from "@/assets/tiramisu.jpg";
 import brownieImg from "@/assets/brownie.jpg";
 
@@ -82,11 +83,12 @@ const Index = () => {
         />
       </div>
 
-      {/* Customer Registration */}
-      <RegistrationForm />
+      
 
-      {/* Events Section */}
-      <EventsSection />
+      {/* Order Section */}
+      <OrderPreview />
+{/* Customer Registration */}
+      <RegistrationForm />
 
       {/* Team Section */}
       <TeamSection />

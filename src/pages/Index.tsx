@@ -2,7 +2,6 @@ import Hero from "@/components/Hero";
 import SignatureCheesecake from "@/components/SignatureCheesecake";
 import ProductHighlight from "@/components/ProductHighlight";
 import RegistrationForm from "@/components/RegistrationForm";
-import EventsSection from "@/components/OrderSection";
 import TeamSection from "@/components/TeamSection";
 import LocationSection from "@/components/LocationSection";
 import Footer from "@/components/Footer";

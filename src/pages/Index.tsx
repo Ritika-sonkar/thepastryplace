@@ -10,7 +10,7 @@ import OrderPreview from "@/components/OrderPreview";
 
 // Import images
 import nobakeCheesecake from "@/assets/cheesecake2.jpeg";
-import cheesecakeHero from "@/assets/Cheesecake3.jpg";
+import cheesecakeHero from "@/assets/cheesecake3.jpg";
 import tiramisuImg from "@/assets/tiramisu.jpg";
 import brownieImg from "@/assets/brownie.jpg";
 

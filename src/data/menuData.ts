@@ -37,48 +37,47 @@ import kunafa from "../assets/cake/kunafa.jpeg";
 
 // cookies
 
-import nankhatai from "../assets/cookies/nankhatai.jpg";
-import coconutCookies from "../assets/cookies/coconutcookies.jpg";
+import nankhatai from "../assets/cookies/Nankhatai - Binjal's VEG Kitchen.jpg";
+import coconutCookies from "../assets/cookies/coconutcookie.jpg";
 import karachiCookies from "../assets/cookies/karachiCookies.jpg";
-import butterCookies from "../assets/cookies/buttercookies.jpg";
+import butterCookies from "../assets/cookies/butter.jpg";
 import ajwainCookies from "../assets/cookies/ajwainCookies.jpg";
-import nutellaThumbprint from "../assets/cookies/nutellaThumbprint.jpg";
+import nutellaThumbprint from "../assets/cookies/Butter Nutella ThumbprintCookies.jpg";
 import brookie from "../assets/cookies/brookie.jpg";
-import pistachioCookies from "../assets/cookies/pistachioCookies.jpg";
-import oatsChocoChip from "../assets/cookies/oatsChocoChip.jpg";
-import attaBiscuits from "../assets/cookies/attaBiscuits.jpg";
+import pistachioCookies from "../assets/cookies/pistachio.jpg";
+import oatsChocoChip from "../assets/cookies/Oatmeal Chocolate.jpg";
+import attaBiscuits from "../assets/cookies/atta.jpg";
 import shrewsburyBiscuits from "../assets/cookies/shrewsburyBiscuits.jpg";
-import periPeriThins from "../assets/cookies/periPeriThins.jpg";
-import cheeseHerbCrackers from "../assets/cookies/cheeseHerbCrackers.jpg";
+import periPeriThins from "../assets/cookies/thins.jpg";
+import cheeseHerbCrackers from "../assets/cookies/cheese.jpg";
 import newYorkCookies from "../assets/cookies/NewYorkCookies.jpg";
-import danishButterCookies from "../assets/cookies/danishButterCookies.jpg";
-import miniLemonCookies from "../assets/cookies/miniLemonCookies.jpg";
-import kajuPistaBiscuits from "../assets/cookies/kajuPistaBiscuits.jpg";
+import danishButterCookies from "../assets/cookies/danish.jpg";
+import miniLemonCookies from "../assets/cookies/lemon.jpg";
+import kajuPistaBiscuits from "../assets/cookies/pista.jpg";
 import chocolateChipBiscuits from "../assets/cookies/chocolateChipBiscuits.jpg";
-import ragiOatsCookies from "../assets/cookies/ragiOatsCookies.jpg";
-import masalaCookies from "../assets/cookies/masalaCookies.jpg";
+import ragiOatsCookies from "../assets/cookies/ragi.jpg";
+import masalaCookies from "../assets/cookies/masala.jpg";
 
 // cakes
-import blueberryCake from "../assets/cakes/blueberryCake.jpg";
-import blackCurrantCake from "../assets/cakes/blackCurrantCake.jpg";
-import tenderCoconutCake from "../assets/cakes/tenderCoconutCake.jpg";
-import chocolateButterscotchCake from "../assets/cakes/chocolateButterscotchCake.jpg";
-import butterscotchCake from "../assets/cakes/butterscotchCake.jpg";
-import kajuMalaiCake from "../assets/cakes/kajuMalaiCake.jpg";
-import rasmalaiCake from "../assets/cakes/rasmalaiCake.jpg";
-import chocolateFudgeCake from "../assets/cakes/chocolateFudgeCake.jpg";
-import redVelvetCake from "../assets/cakes/redVelvetCake.jpg";
-import chocolateMousseCake from "../assets/cakes/chocolateMousseCake.jpg";
-import cookieCreamCake from "../assets/cakes/cookieCreamCake.jpg";
-import mixedFruitCake from "../assets/cakes/mixedFruitCake.jpg";
-import chocoBerryCake from "../assets/cakes/chocoBerryCake.jpg";
-import richyRoseCake from "../assets/cakes/richyRoseCake.jpg";
-import biscoffCake from "../assets/cakes/biscoffCake.jpg";
-import pineappleCake from "../assets/cakes/pineappleCake.jpg";
-import mangoCake from "../assets/cakes/mangoCake.jpg";
-import lichiCake from "../assets/cakes/litchiCake.jpg";
-import KiwiCake from "../assets/cakes/KiwiCake.jpg";
-
+import blueberryCake from "../assets/Cakes/Blueberry.jpg";
+import blackCurrantCake from "../assets/Cakes/blackcurrent.jpg";
+import tenderCoconutCake from "../assets/Cakes/CoconutCake.jpg";
+import chocolateButterscotchCake from "../assets/Cakes/chocolateButterscotch Cake.jpg";
+import butterscotchCake from "../assets/Cakes/Butterscotch Cake.jpg";
+import kajuMalaiCake from "../assets/Cakes/kajumalai Cake.jpg";
+import rasmalaiCake from "../assets/Cakes/Rasmalai Cake.jpg";
+import chocolateFudgeCake from "../assets/Cakes/Chocolatefudgecake.jpg";
+import redVelvetCake from "../assets/Cakes/redvelvet.jpg";
+import chocolateMousseCake from "../assets/Cakes/Chocolate Mousse Cake.jpg";
+import cookieCreamCake from "../assets/Cakes/CookiesCreamCake.jpg";
+import mixedFruitCake from "../assets/Cakes/Mix Fruit Cake.jpg";
+import chocoBerryCake from "../assets/Cakes/choco berry.jpg";
+import richyRoseCake from "../assets/Cakes/Rose Cake.jpg";
+import biscoffCake from "../assets/Cakes/biscoff.jpg";
+import pineappleCake from "../assets/Cakes/pineapple.jpg";
+import mangoCake from "../assets/Cakes/Mango Cake.jpg";
+import lichiCake from "../assets/Cakes/litchicake.jpg";
+import KiwiCake from "../assets/Cakes/kiwiCake.jpg";
 // items
 
 export interface MenuItem {

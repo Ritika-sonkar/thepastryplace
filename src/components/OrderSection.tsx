@@ -19,34 +19,30 @@ import newYorkCookies from "../assets/cookies/NewYorkCookies.jpg";
 import danishButterCookies from "../assets/cookies/danish.jpg";
 import miniLemonCookies from "../assets/cookies/lemon.jpg";
 import kajuPistaBiscuits from "../assets/cookies/pista.jpg";
-import chocolateChipBiscuits from "../assets/cookies/Jacques Torres Chocolate Chip Cookies (Famous NYC Recipe Copycat) - foodiemoms.jpg";
+import chocolateChipBiscuits from "../assets/cookies/chocolateChipBiscuits.jpg";
 import ragiOatsCookies from "../assets/cookies/ragi.jpg";
 import masalaCookies from "../assets/cookies/masala.jpg";
-
 /* ---------------- CAKES ---------------- */
 
-import blueberryCake from "../assets/cakes/blueberry.jpg";
-import blackCurrantCake from "../assets/cakes/blackcurrent.jpg";
-import tenderCoconutCake from "../assets/cakes/CoconutCake.jpg";
-import chocolateButterscotchCake from "../assets/cakes/chocolateButterscotch Cake.jpg";
-import butterscotchCake from "../assets/cakes/Butterscotch Cake.jpg";
-import kajuMalaiCake from "../assets/cakes/kajumalai Cake.jpg";
-import rasmalaiCake from "../assets/cakes/Rasmalai Cake.jpg";
-import chocolateFudgeCake from "../assets/cakes/Chocolatefudgecake.jpg";
-import redVelvetCake from "../assets/cakes/redvelvet.jpg";
-import chocolateMousseCake from "../assets/cakes/Chocolate Mousse Cake.jpg";
-import cookieCreamCake from "../assets/cakes/CookiesCreamCake.jpg";
-import mixedFruitCake from "../assets/cakes/Mix Fruit Cake.jpg";
-import chocoBerryCake from "../assets/cakes/choco berry.jpg";
-import richyRoseCake from "../assets/cakes/Rose Cake.jpg";
-import biscoffCake from "../assets/cakes/biscoff.jpg";
-import pineappleCake from "../assets/cakes/pineapple.jpg";
-import mangoCake from "../assets/cakes/Mango Cake.jpg";
-import lichiCake from "../assets/cakes/litchicake.jpg";
-import kiwiCake from "../assets/cakes/kiwiCake.jpg";
-import peachCake from "../assets/cakes/peach.jpg";
-import hazelnut from "../assets/cakes/Hazelnut.jpg";
-import strawberry from "../assets/cakes/strawberry.jpg";
+import blueberryCake from "../assets/Cakes/Blueberry.jpg";
+import blackCurrantCake from "../assets/Cakes/blackcurrent.jpg";
+import tenderCoconutCake from "../assets/Cakes/CoconutCake.jpg";
+import chocolateButterscotchCake from "../assets/Cakes/chocolateButterscotch Cake.jpg";
+import butterscotchCake from "../assets/Cakes/Butterscotch Cake.jpg";
+import kajuMalaiCake from "../assets/Cakes/kajumalai Cake.jpg";
+import rasmalaiCake from "../assets/Cakes/Rasmalai Cake.jpg";
+import chocolateFudgeCake from "../assets/Cakes/Chocolatefudgecake.jpg";
+import redVelvetCake from "../assets/Cakes/redvelvet.jpg";
+import chocolateMousseCake from "../assets/Cakes/Chocolate Mousse Cake.jpg";
+import cookieCreamCake from "../assets/Cakes/CookiesCreamCake.jpg";
+import mixedFruitCake from "../assets/Cakes/Mix Fruit Cake.jpg";
+import chocoBerryCake from "../assets/Cakes/choco berry.jpg";
+import richyRoseCake from "../assets/Cakes/Rose Cake.jpg";
+import biscoffCake from "../assets/Cakes/biscoff.jpg";
+import pineappleCake from "../assets/Cakes/pineapple.jpg";
+import mangoCake from "../assets/Cakes/Mango Cake.jpg";
+import lichiCake from "../assets/Cakes/litchicake.jpg";
+import KiwiCake from "../assets/Cakes/kiwiCake.jpg";
 
 
 /* ---------------- GALLERY ---------------- */
